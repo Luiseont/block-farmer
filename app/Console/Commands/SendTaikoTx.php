@@ -27,15 +27,8 @@ class SendTaikoTx extends Command
     public function handle()
     {
        $this->info('Ejecutando comando');
-       \Log::info('Ejecutando comando');
-
-       $this->info('Definiendo delay');
-       \Log::info('Definiendo delay');
-       $time = rand(60, 90);
-
-       $this->info('Debe esperar: '.($time/60).' minutos');
-       \Log::info('Debe esperar: '.($time/60).' minutos');
-       sleep($time);
+       \Log::info('Ejecutando comando'); 
+       
        try {
             $inWallet = 5;
             $service = new TaikoChain();
